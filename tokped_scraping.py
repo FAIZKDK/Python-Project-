@@ -11,7 +11,7 @@ driver = webdriver.Chrome()
 driver.get(url)
 
 data = []
-for page in range(2,10):
+for page in range(1,10):
     page_url = 'https://www.tokopedia.com/search?navsource=&page={}&q=smartphone&srp_component_id=02.01.00.00&srp_page_id=&srp_page_title=&st=product'.format(page)
     driver.get(page_url)
     WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#zeus-root")))
